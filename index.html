@@ -6,6 +6,9 @@
 
     <title>Aarthi Balaji | AI Automation Developer</title>
 
+    <meta name="description"
+        content="Aarthi Balaji - AI Automation Developer focused on workflow automation, AI integrations, REST APIs, n8n, Make, Zapier, Airtable and business process automation.">
+
     <style>
         * {
             margin: 0;
@@ -18,197 +21,545 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #1f2937;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
         nav {
-            background: #111827;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
+            backdrop-filter: blur(10px);
         }
 
-        nav h2 {
-            color: white;
+        .nav-container {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav a {
-            color: #d1d5db;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
         }
 
-        nav a:hover {
-            color: white;
+        .logo span {
+            color: #60a5fa;
         }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
 
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
-            padding: 70px 8%;
-            background: white;
+            padding: 90px 0;
+            background:
+                radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 35%),
+                radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.12), transparent 35%);
         }
 
         .hero-content {
-            max-width: 750px;
+            max-width: 850px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #334155;
+            border-radius: 999px;
+            color: #93c5fd;
+            background: #111827;
+            font-size: 0.9rem;
+            margin-bottom: 22px;
         }
 
         .hero h1 {
-            font-size: 52px;
-            margin-bottom: 10px;
-            color: #111827;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            line-height: 1.05;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
         }
 
         .hero h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #4f46e5;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            color: #cbd5e1;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #4b5563;
+            max-width: 780px;
+            font-size: 1.1rem;
+            color: #94a3b8;
             margin-bottom: 30px;
         }
 
-        .buttons a {
-            display: inline-block;
-            padding: 12px 22px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+        .core-stack {
+            margin-bottom: 35px;
+            color: #cbd5e1;
         }
 
-        .primary {
-            background: #4f46e5;
+        .core-stack strong {
+            color: #ffffff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            border-color: #2563eb;
             color: white;
         }
 
-        .secondary {
-            border: 1px solid #4f46e5;
-            color: #4f46e5;
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
         }
+
+        .btn-secondary {
+            background: transparent;
+            color: #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background: #111827;
+            border-color: #60a5fa;
+        }
+
+        /* GENERAL SECTIONS */
 
         section {
-            padding: 70px 8%;
+            padding: 90px 0;
         }
 
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #111827;
+        .section-title {
+            margin-bottom: 45px;
         }
 
-        .about {
-            background: #f5f7fb;
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
-        .about p {
-            max-width: 800px;
-            color: #4b5563;
-            font-size: 17px;
+        .section-title p {
+            color: #94a3b8;
         }
 
-        .skills-container {
+        /* ABOUT */
+
+        .about-box {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .about-box strong {
+            color: #ffffff;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+        }
+
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 9px;
         }
 
-        .skill {
-            background: white;
-            padding: 12px 18px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            font-weight: bold;
+        .skill-tag {
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            padding: 6px 11px;
+            border-radius: 7px;
+            font-size: 0.88rem;
         }
+
+        /* PROJECTS */
 
         .projects {
-            background: white;
+            background: #080d19;
         }
 
-        .project-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .project-card {
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-            transition: transform 0.2s;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            border-color: #3b82f6;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+            border-color: #2563eb;
+        }
+
+        .featured-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #bfdbfe;
+            background: #172554;
+            border: 1px solid #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 999px;
+            margin-bottom: 15px;
+        }
+
+        .project-number {
+            color: #60a5fa;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .project-card h3 {
-            margin-bottom: 12px;
-            color: #111827;
+            color: #ffffff;
+            font-size: 1.45rem;
+            margin-bottom: 10px;
+        }
+
+        .project-stack {
+            color: #93c5fd;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 18px;
         }
 
         .project-card p {
-            color: #4b5563;
-        }
-
-        .contact {
-            text-align: center;
-            background: #111827;
-            color: white;
-        }
-
-        .contact h2 {
-            color: white;
-        }
-
-        .contact p {
-            color: #d1d5db;
+            color: #94a3b8;
             margin-bottom: 20px;
         }
 
-        .contact a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+        .workflow-box {
+            background: #0b1120;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
         }
+
+        .workflow-title {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .workflow {
+            color: #60a5fa;
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .capabilities-title {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .capabilities {
+            list-style: none;
+            margin-bottom: 22px;
+        }
+
+        .capabilities li {
+            color: #cbd5e1;
+            margin-bottom: 7px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .capabilities li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #ffffff;
+            background: #2563eb;
+            padding: 9px 16px;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: #1d4ed8;
+        }
+
+        /* WHAT I BUILD */
+
+        .build-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .build-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            padding: 30px;
+            border-radius: 14px;
+        }
+
+        .build-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .build-card p {
+            color: #94a3b8;
+        }
+
+        /* CURRENTLY FOCUSED */
+
+        .focus-box {
+            background: linear-gradient(135deg, #111827, #0f172a);
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .focus-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 30px;
+        }
+
+        .focus-list li {
+            color: #cbd5e1;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .focus-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #080d19;
+        }
+
+        .contact-box {
+            text-align: center;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 18px;
+            padding: 55px 30px;
+        }
+
+        .contact-box h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .contact-link {
+            border: 1px solid #334155;
+            padding: 10px 17px;
+            border-radius: 8px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+        }
+
+        .availability {
+            color: #93c5fd;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
 
         footer {
+            border-top: 1px solid #1e293b;
+            padding: 25px 0;
             text-align: center;
-            padding: 20px;
-            background: #0b1120;
-            color: #9ca3af;
-            font-size: 14px;
+            color: #64748b;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 700px) {
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 75px 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .build-grid,
+            .focus-list {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: span 1;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .about-box,
+            .skill-card,
+            .project-card,
+            .build-card,
+            .focus-box {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 92%;
+            }
+
             .hero h1 {
-                font-size: 38px;
+                font-size: 2.7rem;
             }
 
-            .hero h2 {
-                font-size: 23px;
+            .hero p {
+                font-size: 1rem;
             }
 
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            nav a {
-                margin: 5px;
+            .section-title h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -216,161 +567,769 @@
 
 <body>
 
-    <nav>
-        <h2>Aarthi Balaji</h2>
+    <!-- NAVIGATION -->
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <nav>
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                Aarthi<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#build">What I Build</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
 
-            <h1>Hi, I'm Aarthi 👋</h1>
+    <!-- HERO -->
 
-            <h2>AI Automation Developer</h2>
+    <section class="hero" id="home">
 
-            <p>
-                I build AI-powered workflow automations using
-                n8n, Make, Zapier, APIs, Airtable, Google Workspace,
-                Slack, Telegram, and AI tools.
-            </p>
+        <div class="container">
 
-            <div class="buttons">
-                <a href="#projects" class="primary">View My Projects</a>
-                <a href="#contact" class="secondary">Contact Me</a>
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    AI Automation Developer
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Aarthi</span> 👋
+                </h1>
+
+                <h2>
+                    AI Automation Developer
+                </h2>
+
+                <p>
+                    I build practical AI-powered workflow automations that connect
+                    applications, APIs, databases, and communication tools to automate
+                    business processes.
+                </p>
+
+                <div class="core-stack">
+                    <strong>Core Stack:</strong>
+                    n8n • Make • Zapier • Integrately • APIs • Webhooks • Airtable •
+                    Google Workspace • Groq AI
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="https://linkedin.com/in/aarthi-balaji-7124671a"
+                       target="_blank"
+                       class="btn btn-secondary">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:aarthibalaji1999@gmail.com"
+                       class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+
             </div>
 
         </div>
-    </section>
-
-    <section class="about" id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            I am a BE EEE graduate focused on AI automation and
-            workflow automation. I enjoy connecting APIs, AI tools,
-            databases, communication platforms, and business processes
-            to build practical automation solutions.
-        </p>
 
     </section>
+
+
+    <!-- ABOUT ME -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Building practical automation solutions for real business workflows.</p>
+            </div>
+
+            <div class="about-box">
+
+                <p>
+                    I am a BE EEE graduate focused on
+                    <strong>AI Automation, Workflow Automation, API Integration,
+                    and Business Process Automation.</strong>
+                </p>
+
+                <p>
+                    I enjoy building end-to-end automation workflows that reduce
+                    repetitive manual tasks, connect multiple applications, and improve
+                    operational efficiency.
+                </p>
+
+                <p>
+                    My projects include
+                    <strong>AI-powered customer support, employee onboarding,
+                    document automation, leave approval, and inventory monitoring.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
 
     <section id="skills">
 
-        <h2>Skills</h2>
+        <div class="container">
 
-        <div class="skills-container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+                <p>Tools and technologies I use to design and build automation workflows.</p>
+            </div>
 
-            <div class="skill">n8n</div>
-            <div class="skill">Make</div>
-            <div class="skill">Zapier</div>
-            <div class="skill">AI Automation</div>
-            <div class="skill">REST APIs</div>
-            <div class="skill">Webhooks</div>
-            <div class="skill">Airtable</div>
-            <div class="skill">Google Workspace</div>
-            <div class="skill">Slack</div>
-            <div class="skill">Telegram</div>
-            <div class="skill">Python</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">JSON</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Excel</div>
+            <div class="skills-grid">
+
+                <!-- Automation & AI -->
+
+                <div class="skill-card">
+
+                    <h3>Automation & AI</h3>
+
+                    <div class="skill-tags">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">Make</span>
+                        <span class="skill-tag">Zapier</span>
+                        <span class="skill-tag">Integrately</span>
+                        <span class="skill-tag">AI Workflow Automation</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Groq AI</span>
+                    </div>
+
+                </div>
+
+
+                <!-- APIs & Integration -->
+
+                <div class="skill-card">
+
+                    <h3>APIs & Integration</h3>
+
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">HTTP Requests</span>
+                        <span class="skill-tag">Webhooks</span>
+                        <span class="skill-tag">JSON</span>
+                        <span class="skill-tag">API Authentication Basics</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Databases & Productivity -->
+
+                <div class="skill-card">
+
+                    <h3>Databases & Productivity Tools</h3>
+
+                    <div class="skill-tags">
+                        <span class="skill-tag">Airtable</span>
+                        <span class="skill-tag">Google Sheets</span>
+                        <span class="skill-tag">Google Forms</span>
+                        <span class="skill-tag">Google Docs</span>
+                        <span class="skill-tag">Google Drive</span>
+                        <span class="skill-tag">Gmail</span>
+                        <span class="skill-tag">Slack</span>
+                        <span class="skill-tag">Telegram</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Programming & Data -->
+
+                <div class="skill-card">
+
+                    <h3>Programming & Data</h3>
+
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
+
+
+    <!-- FEATURED PROJECTS -->
 
     <section class="projects" id="projects">
 
-        <h2>Projects</h2>
+        <div class="container">
 
-        <div class="project-grid">
+            <div class="section-title">
 
-            <div class="project-card">
-                <h3>🤖 AI Customer Support Ticket Automation</h3>
+                <h2>Featured Projects</h2>
 
                 <p>
-                    Automated customer support workflows using
-                    Gmail, Groq AI, Airtable, Slack, and workflow
-                    automation tools.
+                    End-to-end automation projects demonstrating AI integration,
+                    workflow orchestration, API integration, and business process automation.
                 </p>
+
             </div>
 
-            <div class="project-card">
-                <h3>👥 Employee Onboarding Automation</h3>
 
-                <p>
-                    Automated employee onboarding processes using
-                    forms, databases, email, Slack, and Google Workspace.
-                </p>
-            </div>
+            <div class="projects-grid">
 
-            <div class="project-card">
-                <h3>📊 Airtable & Google Sheets Automation</h3>
 
-                <p>
-                    Built workflows to synchronize information between
-                    Airtable and Google Sheets and automate business updates.
-                </p>
-            </div>
+                <!-- PROJECT 1 -->
 
-            <div class="project-card">
-                <h3>🔔 Gold Price Alert Automation</h3>
+                <article class="project-card featured">
 
-                <p>
-                    Created an API-based automation that retrieves
-                    gold price information and sends alerts through Telegram.
-                </p>
-            </div>
+                    <div class="featured-label">
+                        ⭐ Featured Project
+                    </div>
 
-            <div class="project-card">
-                <h3>📩 Jotform Notification Automation</h3>
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
 
-                <p>
-                    Built a workflow that receives Jotform submissions
-                    and sends notifications to Slack and Telegram based
-                    on user selection.
-                </p>
+                    <h3>
+                        🤖 AI Customer Support Ticket Automation
+                    </h3>
+
+                    <div class="project-stack">
+                        Make • Groq AI • Gmail • Airtable • Slack
+                    </div>
+
+                    <p>
+                        Automated the customer support process from incoming email
+                        to ticket creation and resolution.
+                    </p>
+
+                    <div class="workflow-box">
+
+                        <div class="workflow-title">
+                            Workflow
+                        </div>
+
+                        <div class="workflow">
+                            Gmail → Groq AI → Airtable → Slack → Gmail
+                        </div>
+
+                    </div>
+
+                    <div class="capabilities-title">
+                        Key capabilities:
+                    </div>
+
+                    <ul class="capabilities">
+
+                        <li>
+                            AI-based support issue categorization
+                        </li>
+
+                        <li>
+                            Automated ticket creation
+                        </li>
+
+                        <li>
+                            Support team notifications
+                        </li>
+
+                        <li>
+                            Customer acknowledgement emails
+                        </li>
+
+                        <li>
+                            Automated resolution emails
+                        </li>
+
+                    </ul>
+
+                    <a href="https://github.com/aarthibalaji1999-del/ai-customer-support-ticket-automation"
+                       target="_blank"
+                       class="project-link">
+                        View Project →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        👥 Employee Onboarding Automation
+                    </h3>
+
+                    <div class="project-stack">
+                        n8n • Google Drive • Google Docs • Google Sheets
+                    </div>
+
+                    <p>
+                        Built a modular employee onboarding workflow using
+                        <strong>Parent and Child Workflows</strong> to automate
+                        document and onboarding processes.
+                    </p>
+
+                    <div class="workflow-box">
+
+                        <div class="workflow-title">
+                            Workflow
+                        </div>
+
+                        <div class="workflow">
+                            Employee Data → Parent Workflow → Child Workflow → Google Workspace
+                        </div>
+
+                    </div>
+
+                    <div class="capabilities-title">
+                        Key capabilities:
+                    </div>
+
+                    <ul class="capabilities">
+
+                        <li>
+                            Workflow modularization
+                        </li>
+
+                        <li>
+                            Google Workspace integration
+                        </li>
+
+                        <li>
+                            Automated document processing
+                        </li>
+
+                        <li>
+                            Parent → Child workflow execution
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        📄 Wikipedia → Google Docs Automation
+                    </h3>
+
+                    <div class="project-stack">
+                        n8n • Wikipedia REST API • Google Docs
+                    </div>
+
+                    <p>
+                        Automated the process of retrieving Wikipedia article data
+                        through an API, formatting the required information, and
+                        writing it into a Google Document.
+                    </p>
+
+                    <div class="workflow-box">
+
+                        <div class="workflow-title">
+                            Workflow
+                        </div>
+
+                        <div class="workflow">
+                            Wikipedia API → HTTP Request → Data Transformation → Google Docs
+                        </div>
+
+                    </div>
+
+                    <div class="capabilities-title">
+                        Key capabilities:
+                    </div>
+
+                    <ul class="capabilities">
+
+                        <li>
+                            REST API integration
+                        </li>
+
+                        <li>
+                            HTTP requests
+                        </li>
+
+                        <li>
+                            Data transformation
+                        </li>
+
+                        <li>
+                            Parent and Child Workflow architecture
+                        </li>
+
+                        <li>
+                            Automated Google Docs generation
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        📝 Smart Leave Approval System
+                    </h3>
+
+                    <div class="project-stack">
+                        Zapier • Google Forms • Google Sheets • Airtable • Gmail
+                    </div>
+
+                    <p>
+                        Automated employee leave requests from submission
+                        through manager approval.
+                    </p>
+
+                    <div class="workflow-box">
+
+                        <div class="workflow-title">
+                            Workflow
+                        </div>
+
+                        <div class="workflow">
+                            Google Forms → Google Sheets → Airtable → Manager Decision → Gmail
+                        </div>
+
+                    </div>
+
+                    <div class="capabilities-title">
+                        Key capabilities:
+                    </div>
+
+                    <ul class="capabilities">
+
+                        <li>
+                            Automated leave request collection
+                        </li>
+
+                        <li>
+                            Airtable record creation
+                        </li>
+
+                        <li>
+                            Approval/rejection workflow
+                        </li>
+
+                        <li>
+                            Conditional email notifications
+                        </li>
+
+                        <li>
+                            Centralized leave tracking
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 05
+                    </div>
+
+                    <h3>
+                        📦 Smart Low Stock Alert System
+                    </h3>
+
+                    <div class="project-stack">
+                        Integrately • Google Sheets • Gmail
+                    </div>
+
+                    <p>
+                        Built an inventory monitoring automation that checks
+                        stock levels and sends an email alert when a product
+                        falls below the defined threshold.
+                    </p>
+
+                    <div class="workflow-box">
+
+                        <div class="workflow-title">
+                            Workflow
+                        </div>
+
+                        <div class="workflow">
+                            Google Sheets → Stock Check → Condition → Gmail Alert
+                        </div>
+
+                    </div>
+
+                    <div class="capabilities-title">
+                        Key capabilities:
+                    </div>
+
+                    <ul class="capabilities">
+
+                        <li>
+                            Automated inventory monitoring
+                        </li>
+
+                        <li>
+                            Conditional stock checking
+                        </li>
+
+                        <li>
+                            Low-stock detection
+                        </li>
+
+                        <li>
+                            Automated email notifications
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
             </div>
 
         </div>
 
     </section>
 
-    <section class="contact" id="contact">
 
-        <h2>Let's Connect</h2>
+    <!-- WHAT I BUILD -->
 
-        <p>
-            Interested in AI automation projects or opportunities?
-            Feel free to connect with me.
-        </p>
+    <section id="build">
 
-        <a href="mailto:aarthibalaji1999@gmail.com">📧 Email</a>
+        <div class="container">
 
-        <a href="https://www.linkedin.com/in/aarthi-balaji-7124671a9/"
-           target="_blank">
-            LinkedIn
-        </a>
+            <div class="section-title">
 
-        <a href="https://github.com/aarthibalaji1999-del"
-           target="_blank">
-            GitHub
-        </a>
+                <h2>What I Build</h2>
+
+                <p>
+                    Practical automation solutions designed around real business processes.
+                </p>
+
+            </div>
+
+
+            <div class="build-grid">
+
+
+                <div class="build-card">
+
+                    <h3>
+                        🔗 API Integrations
+                    </h3>
+
+                    <p>
+                        Connect applications and external APIs to automate
+                        data exchange.
+                    </p>
+
+                </div>
+
+
+                <div class="build-card">
+
+                    <h3>
+                        ⚙️ Workflow Automation
+                    </h3>
+
+                    <p>
+                        Design multi-step workflows using n8n, Make,
+                        Zapier, and Integrately.
+                    </p>
+
+                </div>
+
+
+                <div class="build-card">
+
+                    <h3>
+                        🤖 AI Automation
+                    </h3>
+
+                    <p>
+                        Integrate AI into business workflows for classification,
+                        processing, and decision support.
+                    </p>
+
+                </div>
+
+
+                <div class="build-card">
+
+                    <h3>
+                        📊 Business Process Automation
+                    </h3>
+
+                    <p>
+                        Automate repetitive processes such as support, onboarding,
+                        approvals, notifications, and inventory monitoring.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </section>
 
+
+    <!-- CURRENTLY FOCUSED ON -->
+
+    <section id="focus">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Currently Focused On</h2>
+
+                <p>
+                    Continuously improving my automation engineering skills.
+                </p>
+
+            </div>
+
+
+            <div class="focus-box">
+
+                <ul class="focus-list">
+
+                    <li>
+                        Advanced n8n workflow development
+                    </li>
+
+                    <li>
+                        REST API integrations
+                    </li>
+
+                    <li>
+                        JavaScript for workflow automation
+                    </li>
+
+                    <li>
+                        AI-powered business automation
+                    </li>
+
+                    <li>
+                        Webhooks and event-driven workflows
+                    </li>
+
+                    <li>
+                        Building production-ready automation solutions
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONNECT WITH ME -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>
+                    Connect With Me
+                </h2>
+
+                <p>
+                    Interested in AI automation, workflow automation,
+                    or business process automation?
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="https://linkedin.com/in/aarthi-balaji-7124671a"
+                       target="_blank"
+                       class="contact-link">
+                        💼 LinkedIn
+                    </a>
+
+                    <a href="mailto:aarthibalaji1999@gmail.com"
+                       class="contact-link">
+                        📧 aarthibalaji1999@gmail.com
+                    </a>
+
+                </div>
+
+
+                <p>
+                    📂 Explore my repositories below to see my automation
+                    projects and workflow implementations.
+                </p>
+
+
+                <p class="availability">
+                    ⭐ Open to AI Automation Developer, Automation Engineer,
+                    and Workflow Automation opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
     <footer>
-        © 2026 Aarthi Balaji | AI Automation Developer
+
+        <div class="container">
+
+            © 2026 Aarthi Balaji • AI Automation Developer
+
+        </div>
+
     </footer>
+
 
 </body>
 </html>
